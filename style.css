@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+body{
+    color: white;
+    font-family: 'Nunito', sans serif;
+    background-color: white;
+}
+
+body.page{
+    margin: 20px 80px;
+}
+
+/* barre de navigation */
+nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: sticky; /* permet de fixer la barre de navigatino en haut */
+    top: 0;
+    background-color: black;
+    padding: 10px 0px;
+
+}
+
+nav .onglets{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+nav .onglets a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}
+
+nav .buttons button{
+    padding: 13px 20px;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
+nav .buttons .login{
+    background-color: inherit;
+    margin-right: 10px;
+    color: grey;
+}
+
+nav .buttons .register{
+    background-color: pink;
+    margin-right: 10px;
+    color: red;
+}
+/* FIN de barre de navigation */
+
+/* partie header */
+header{
+    margin-top: 40px;
+    background: url('image/hotel.jpeg');
+    background-repeat: no-repeat;
+    /* background-position: center; */
+    background-position: bottom;
+    background-size: cover;
+
+}
+
+
+header h1{
+    text-align: center;
+    font-size: 60px;
+    padding: 150px;
+    color: whitesmoke;
+
+}
+
+/* FIN partie header */
+
+/* ARTICLE */
+.site-container{
+    margin:2rem auto;
+    max-width: calc(100% - 80px);
+}
+
+.article-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+    gap: 2rem;
+}
+
+.article-image{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.article-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+.article-card{
+    background: white;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow:1px 1px 1px 0 rgba(0, 0, 0, 0.171); 
+    
+}
+
+.article-card:hover{
+    box-shadow: 0 4px 20px 0 rgba(34,68,123,0.2);
+}
+
+.article-content{
+    padding: 1rem;
+}
+
+.article-content .card-category{
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: #6b82a7;
+    display: block;
+    text-decoration: none;
+}
+
+.article-content .card-title{
+    margin: 1rem 0;
+    color: #22447b;
+}
+
+.article-content.card-excerpt{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #6b82a7;
+    margin: 0;
+}
+/* FIN ARTICLE */
+
+
+
+
+
+/* FOOTER */
+
+footer{
+    background-color: #1a1a1a;
+    padding: 25px 100px;
+    color: #828282;
+    text-decoration: none;
+}
+
+.colonnes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-decoration: none;
+
+}
+
+.colonnes a {
+    text-decoration: none;
+    color: #828282;
+}
+
+.colonne ul{
+    list-style-type: none;
+    padding: 0;
+}
+/* FIN FOOTER */
+
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 640px) {
+    body .page{
+        margin: 10px;
+    }
+
+    nav .onglets{
+        display: none;
+    }
+
+    header{
+        margin-top: 20px;
+        background-size: 250px 250px;
+    }
+
+    header h1{
+        font-size: 30px;
+        padding: 100px;
+    }
+
+}
+
+
+@media screen and (min-width: 768px){
+    .site-container{
+        max-width: 608px;
+    }
+    .article-card{
+        display: grid;
+        grid-template-rows: 220px 1fr;
+    }
+}
+
+@media screen and (min-width: 1280px){
+    .site-container{
+        max-width: 1156px;
+    }
+}
+/*  FIN MEDIA QUERY */
